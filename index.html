@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<link href="bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="row vw-100 vh-100 d-block-flex justify-content-center bg-info-subtle" style="background-image: url('images/png-image.png');">
+        <div class="col-md-6 col-sm-12 p-3">
+            <h1>به سایت بک گراندهای زیبا خوش آمدید</h1><br>
+            <p> 
+              در این سایت برای شما والپیپرهای زیبای مخصوص بک گراند سیستم های رایانه ای گردآوری شده اند
+              <br> 
+              امیدواریم برای شما نیز دلپذیر باشند
+            </p>
+        </div>
+        <div class="1">
+            <img src="images/Hello-Vector-PNG.png" style="margin-left:70px; height:350px; weight:350px;margin-bottom:50px;"> 
+        </div>
+
+    </div>
+    
+</div>
+
+
+<h2 >گالری تصاویر</h2>
+
+<div class="row vw-100 vh-80 min-vh-100 d-flex justify-content-center">
+  <div class="column">
+    <img src="images/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </div>
+</div>
+<div id="Modaal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+
+  <div class="modal-content">
+
+    <div class="mSlides">  <!-- اسلایدها--> 
+      
+      <img src="images/1.jpg" style="width:100%">
+    </div>
+
+    <div class="mSlides">
+      
+      <img src="images/2.jpg" style="width:100%">
+    </div>
+
+    <div class="mSlides">
+      
+      <img src="images/3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mSlides">
+      
+      <img src="images/4.jpg" style="width:100%">
+    </div>
+    <div class="mSlides">
+      
+      <img src="images/5.jpg" style="width:100%">
+    </div>
+
+    <div class="mSlides">
+      
+      <img src="images/6.jpg" style="width:100%">
+    </div>
+    <div class="mSlides">
+      
+      <img src="images/7.jpg" style="width:100%">
+    </div>
+    <div class="mSlides">
+      
+      <img src="images/8.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="minusSlides(-1)">&#10094</a>
+    <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+    <div class="captions">
+      <p id="caption"></p>
+    </div>
+
+
+    <!-- پیش نمایش پایین اسلاید-->
+  
+    <div class="row  d-flex justify-content-center bg-black">
+    <div class="columnx">
+      <img class="foot cursor" src="images/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="طاووس">
+    </div>
+    <div class="columnx">
+      <img class="foot cursor" src="images/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="منظره کرم شب تاب">
+    </div>
+    <div class="columnx">
+      <img class="foot cursor" src="images/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="شب برفی">
+    </div>
+    <div class="columnx">
+      <img class="foot cursor" src="images/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="سرزمین قارچ ها">
+    </div>
+    <div class="columnx">
+      <img class="foot cursor" src="images/5.jpg" style="width:100%" onclick="currentSlide(5)" alt="هالوین">
+    </div>
+    <div class="columnx">
+      <img class="demo cursor" src="images/6.jpg" style="width:100%" onclick="currentSlide(6)" alt="کدوتنبل عصبانی">
+    </div>
+    <div class="columnx">
+      <img class="foot cursor" src="images/7.jpg" style="width:100%" onclick="currentSlide(7)" alt="بهشت بنفش">
+    </div>
+    <div class="columnx">
+      <img class="foot cursor" src="images/8.jpg" style="width:100%" onclick="currentSlide(8)" alt="جزیره آرامش بخش">
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- فرم-->
+<form name="form" method="post" action="#" id="form" onsubmit="return etebarsanji()">
+
+  <p>فرم ثبت نام</p>
+  <lable for="fname">نام</lable> 
+  <input type="text" id="fname" name="fname">
+  
+
+  <span id="fnameerror"></span>
+  <br>
+  <lable for="lname">نام خانوادگی</lable>
+  <input type="text" id="lname" name="lname">
+  
+  <span id="lnameerror"></span>
+ <br>
+  <lable for="phonenumber"> شماره تلفن</lable>
+  <input type="text" id="phonenumber" name="phonenumber">
+ 
+  
+  <span id="phoneerror"></span>
+  
+  <span id="phoneerror1"></span>
+  <br>
+  <lable for="email">ایمیل</lable>
+  <input type="text" id="email" name="email">
+  
+  
+  <span id="emailerror"></span>
+<br>
+  <lable for="username">نام کاربری</lable>
+  <input type="text" id="username" name="username">
+ 
+
+  <span id="usererror"></span>
+ <br>
+  <lable for="password">رمز عبور</lable>
+  <input type="password" id="password" name="password">
+  
+ 
+  <span id="passerror"></span>
+ <br>
+  <input type="submit" value="ارسال">
+  <input type="reset" value="پاک کردن اطلاعات">
+</form>
+
+<script>
+function openModal() {
+  document.getElementById('Modaal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('Modaal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// رفتن به اسلاید قبلی یا بعدی
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function minusSlides(n){
+  showSlides(slideIndex += n);
+}
+
+//  نمایش اسلاید انتخابی
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mSlides");
+  var foots = document.getElementsByClassName("foot");
+  var captionText = document.getElementById("caption");
+
+  
+  if (n > slides.length) { // پرش از اسلاید اخر به اولین اسلاید
+    slideIndex = 1  
+  }
+  if (n < 1) {
+    slideIndex = slides.length  // پرش از اولین اسلاید به اسلاید آخر  
+  }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  // اسلاید قبلی از حالت نمایش خارج میشود 
+  }
+  slides[slideIndex-1].style.display = "block";
+  captionText.innerHTML = foots[slideIndex-1].alt;
+} 
+</script>
+<script>
+  function etebarsanji(){
+      <!--  "بررسی پر بودن فیلدها"  --> 
+      var x = document.forms["form"]["fname"].value;
+      if(x==""){
+          alert(" *لطفا نام خود را وارد کنید.");
+          return false;
+      }
+      var x = document.forms["form"]["lname"].value;
+      if(x==""){
+          alert(" *لطفا نام خانوادگی خود را وارد کنید.");
+          return false;
+      }
+      var x = document.forms["form"]["phonenumber"].value;
+      if(x==""){
+          alert(" *لطفا شماره تلفن خود را وارد کنید.");
+          return false;
+      }
+      var x = document.forms["form"]["email"].value;
+      if(x==""){
+          alert(" *لطفا ایمیل خود را وارد کنید.");
+          return false;
+      }
+      var x = document.forms["form"]["username"].value;
+      if(x==""){
+          alert(" *لطفا نام کاربری خود را وارد کنید.");
+          return false;
+      }
+      var x = document.forms["form"]["password"].value;
+      if(x==""){
+          alert(" *لطفا رمزعبور خود را وارد کنید.");
+          return false;
+      }
+
+     
+      var pass = document.getElementById("password");
+      var passerror = document.getElementById("passerror");
+      passerror.textContent = "";
+      if(pass.value.length < 6 || pass.value.length > 20){
+          passerror.textContent =" *کلمه‌ی عبور باید 6 تا 20 کاراکتر باشد";
+          event.preventDefault();
+      }
+
+      var phone = document.getElementById("phonenumber");
+      var phoneerror = document.getElementById("phoneerror");
+
+      phoneerror.textContent = "";
+      if(phone.value.length < 11 || phone.value.length > 11){
+          phoneerror.textContent =" *شماره تماس باید 11 رقمی باشد";
+          event.preventDefault();
+      }
+      var phoneerror1 = document.getElementById("phoneerror1");
+      phoneerror1.textContent = "";
+      if(!/^\d+$/.test(phone.value)){
+          phoneerror1.textContent =" *شماره تماس خود را به درستی وارد کنید";
+          event.preventDefault();
+      }
+
+      var email = document.getElementById("email");
+      var emailerror = document.getElementById("emailerror");
+      var simpleEmail = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+      emailerror.textContent = "";
+      if(!simpleEmail.test(email.value)){
+          emailerror.textContent = " *ایمیل خود را به درستی وارد کنید";
+          event.preventDefault();
+      }
+
+      var fname=document.getElementById("fname")
+      var lname=document.getElementById("lname")
+      var simplename = /^[ آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئ\s]+$/;  
+      var fnameerror=document.getElementById("fnameerror")
+      var lnameerror=document.getElementById("lnameerror")
+      fnameerror.textContent = "";
+      lnameerror.textContent = "";
+      if(!simplename.test(fname.value)){
+          fnameerror.textContent = " *نام خود را به درستی وارد کنید";
+          event.preventDefault();
+      }
+      if(!simplename.test(lname.value)){
+          lnameerror.textContent = " *نام خانوادگی خود را به درستی وارد کنید";
+          event.preventDefault();
+      }
+
+      var user=document.getElementById("username")
+      var usererror=document.getElementById("usererror")
+      var simpleuser=/^[a-z0-9._]+$/;
+      usererror.textContent = "";
+      if(!simpleuser.test(user.value)){
+          usererror.textContent = " *نام کاربری خود را به درستی وارد کنید";
+          event.preventDefault();
+      }
+
+
+
+
+  }
+</script>
+</body>
+</html>
